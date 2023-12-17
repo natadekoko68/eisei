@@ -35,7 +35,7 @@ def make_linspace(key, num=100):
     return np.linspace(min_temp, max_temp, num)
 
 
-def graph(key,outputpath="/Users/kotaro/Desktop/"):
+def graph(key,outputpath):
     popt, _ = op.curve_fit(f, standard_concs[key], standard_abs[key])
     x = make_linspace(key)
     y_pred = popt[0] * x + popt[1]
@@ -63,9 +63,9 @@ def graph(key,outputpath="/Users/kotaro/Desktop/"):
     plt.clf()
 
 
-def day3():
+def day3(outputpath="/Users/kotaro/Desktop/"):
     for key in samples:
-        graph(key)
+        graph(key,outputpath=outputpath)
 
 
 if __name__ == "__main__":
