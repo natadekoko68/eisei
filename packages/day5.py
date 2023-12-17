@@ -36,7 +36,7 @@ def prev_main():
     plt.savefig("/Users/kotaro/Desktop/Day5.jpg", dpi=300)
     plt.show()
 
-def day5(outputpath="/Users/kotaro/Desktop/"):
+def day5(outputpath):
     assert (len(fluorescent) == 14)
     percentage = list(map(to_percentage, fluorescent))
     fig = plt.figure(tight_layout=True, figsize=(10, 10), dpi=300)

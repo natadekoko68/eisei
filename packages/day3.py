@@ -63,7 +63,7 @@ def graph(key,outputpath):
     plt.clf()
 
 
-def day3(outputpath="/Users/kotaro/Desktop/"):
+def day3(outputpath):
     for key in samples:
         graph(key,outputpath=outputpath)
 

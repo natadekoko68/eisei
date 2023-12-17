@@ -5,4 +5,3 @@ if __name__ == "__main__":
     outputpath = "/Users/kotaro/Desktop/自学/Pycharm/衛生/outputs/"
     day3(outputpath = outputpath)
     day5(outputpath = outputpath)
-    print("done")
