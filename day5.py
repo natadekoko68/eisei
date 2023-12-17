@@ -17,7 +17,6 @@ fluorescent = {"No.1": 1.801,
                "No.14": 0.814,
                }
 
-
 def to_percentage(key, background="No.14", maximum="No.13"):
     return 100 * (fluorescent[key] - fluorescent[background]) / (fluorescent[maximum] - fluorescent[background])
 
