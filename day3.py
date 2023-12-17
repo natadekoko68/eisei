@@ -16,7 +16,6 @@ standard_abs = {"PE": [0.000, 0.073, 0.161, 0.356],
 objective_abs = {"PE": 0.095,
                 "PS": 0.007,
                 }  # a.u.
-
 objective_quantities = {"PE": 4.7,
                      "PS": 3.9,
                      }  # ml
@@ -36,7 +35,7 @@ def make_linspace(key, num=100):
     return np.linspace(min_temp, max_temp, num)
 
 
-def graph(key):
+def graph(key,outputpath="/Users/kotaro/Desktop/"):
     popt, _ = op.curve_fit(f, standard_concs[key], standard_abs[key])
     x = make_linspace(key)
     y_pred = popt[0] * x + popt[1]
@@ -59,15 +58,15 @@ def graph(key):
     plt.plot([ax.get_xlim()[0], x_obj], [objective_abs[key], objective_abs[key]], ":")
     plt.text(x_obj, ax.get_ylim()[0],f"　{x_obj:.3f}", horizontalalignment='left', verticalalignment='bottom')
     plt.text(ax.get_xlim()[0], objective_abs[key], f"　{objective_abs[key]:.3f}", horizontalalignment='left', verticalalignment='bottom')
-    plt.savefig(f"/Users/kotaro/Desktop/Day3({key}).jpg", dpi=300)
+    plt.savefig(outputpath + f"Day3({key}).jpg", dpi=300)
     # plt.show()
     plt.clf()
 
 
-def main():
+def day3():
     for key in samples:
         graph(key)
 
 
 if __name__ == "__main__":
-    main()
+    day3()
