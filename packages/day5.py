@@ -49,7 +49,7 @@ def day5(outputpath="/Users/kotaro/Desktop/"):
     plt.grid(axis="y", linestyle="dotted", color="gray")
     plt.subplot(gs[1,0])
     plt.axis("off")
-    im = Image.open("/Users/kotaro/Desktop/自学/Pycharm/衛生/Table5.png")
+    im = Image.open("/Table5.png")
     plt.imshow(im)
     plt.savefig(outputpath+"Day5.jpg", dpi=300)
     # plt.show()
