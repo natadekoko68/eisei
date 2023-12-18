@@ -1,7 +1,7 @@
 from packages.image import concatenate_draw,get_image
 import glob
 
-texts = {"day2": ["ヨード","ニンヒドリン"],
+texts = {"day2": ["ニンヒドリン","ヨード"],
          "day3": ["ヨード",],
          "day4": ["ニンヒドリン"],
          }
