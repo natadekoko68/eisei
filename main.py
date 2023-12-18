@@ -3,6 +3,5 @@ from packages.day5 import day5
 
 if __name__ == "__main__":
     outputpath = "/Users/kotaro/Desktop/"
-    day3(outputpath = outputpath)
-    day5(outputpath = outputpath)
-
+    day3(outputpath=outputpath)
+    day5(outputpath=outputpath)
