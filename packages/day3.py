@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import japanize_matplotlib
 import scipy.optimize as op
 from sklearn.metrics import r2_score
-from packages.image import get_image, concatenate
+from packages.image import get_image, concatenate_h, concatenate
 
-samples = ["PE", "PS"]
+samples = ["PS", "PE"]
 
 standard_concs = {"PE": [0, 0.025, 0.05, 0.1],
                   "PS": [0, 0.0125, 0.025, 0.05, 0.1],
@@ -65,12 +65,13 @@ def graph(key,outputpath):
     return outputpath + f"Day3({key}).jpg"
 
 
-def day3(outputpath):
+def day3(outputpath, order=samples):
     lst = []
-    for key in samples:
+    for key in order:
         a = graph(key,outputpath=outputpath)
         lst.append(get_image(a))
-    concatenate(lst, outputpath)
+    concatenate_h(lst, outputpath, "Day3")
+    concatenate(lst, outputpath, "Day3")
     return None
 
 
