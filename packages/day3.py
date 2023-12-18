@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import japanize_matplotlib
 import scipy.optimize as op
 from sklearn.metrics import r2_score
+from packages.image import get_image, concatenate
 
 samples = ["PE", "PS"]
 
@@ -61,11 +62,16 @@ def graph(key,outputpath):
     plt.savefig(outputpath + f"Day3({key}).jpg", dpi=300)
     # plt.show()
     plt.clf()
+    return outputpath + f"Day3({key}).jpg"
 
 
 def day3(outputpath):
+    lst = []
     for key in samples:
-        graph(key,outputpath=outputpath)
+        a = graph(key,outputpath=outputpath)
+        lst.append(get_image(a))
+    concatenate(lst, outputpath)
+    return None
 
 
 if __name__ == "__main__":
