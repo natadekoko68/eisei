@@ -4,6 +4,7 @@ from packages.chromatgraphy import get_concat_pictures
 
 if __name__ == "__main__":
     outputpath = "/Users/kotaro/Desktop/"
+    # outputpath = ""
     day3(outputpath=outputpath)
     day5(outputpath=outputpath)
     get_concat_pictures(outputpath=outputpath)
